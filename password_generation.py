@@ -1,6 +1,9 @@
 import random
-while i<=8:
-    x=''.join(chr(random.randint(33,126)))
-    i+=1
-print("your new password is:")
-print(x)
+import string
+length=int(input("enter the length of the password"))
+passwords = []
+for i in range(length):
+    password = ''. join(random. choice(string. ascii_letters + string. digits + string. punctuation))
+    passwords. append(password)
+
+print(*passwords)
